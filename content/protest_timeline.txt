@@ -1,0 +1,70 @@
+The 2025–2026 uprising represents the single greatest threat to the Islamic Republic since
+its founding in 1979. What started as a desperate plea against poverty has mutated into a
+full-scale revolution. Driven by systemic corruption, isolation, and the catastrophic "Twelve-
+Day War" in mid-2025, this movement has permanently fractured the region's political
+order.
+The spark was the total disintegration of the economy. By late 2025, following the return of
+UN "snapback" sanctions, the nation’s financial floor fell out. The Rial collapsed to a record
+low of 1.5 million against the US Dollar, and inflation surged past 42%. For the average
+Iranian, survival became impossible. The breaking point arrived on December 28, 2025.
+That was the day merchants in Tehran’s Grand Bazaar locked their doors. The Bazaar had
+historically been a pillar of the clergy’s support; when the bazaaris went on strike, the
+regime lost its economic backbone.
+The escalation was terrifyingly fast. Within days, the unrest spread from Tehran to over
+180 cities. Slogans shifted overnight. People stopped asking for lower prices and started
+chanting "Javid Shah" in the streets. Symbolic acts of defiance, like the "Tehran Tank Man"
+who stood down security forces on Jomhuri Street on December 29, ignited the public
+imagination. By January 8, 2026, opposition figure Reza Pahlavi called for unity, and
+millions flooded the streets to demand a secular democracy.
+The regime responded with maximum force. On January 8, 2026, the state severed the
+country's connection to the world, imposing a total internet blackout confirmed by
+Cloudflare Radar (https://radar.cloudflare.com/traffic/ir?dateRange=14d) and NetBlocks
+(https://netblocks.org/). Under the cover of digital darkness, the killing began.
+By January 10, BBC News (https://www.bbc.com/news/articles/cr57vmznmd9o) reported
+over 2,000 deaths. As the crackdown intensified, the numbers became numbing. CBS
+News (https://www.cbsnews.com/news/iran-protest-death-toll-over-12000-feared-higher-
+video-bodies-at-morgue) reported on January 13 that activist groups estimated between
+12,000 and 20,000 dead. On January 17, The Times (https://www.thetimes.com/world/
+middle-east/article/iran-protests-death-toll-lmh2lgv5c) cited medical professionals who
+calculated the toll at 16,500 to 18,000 killed, with over 330,000 injured.
+Behind these staggering statistics are individual nightmares. A recent report by the Iran
+Human Rights Documentation Center (https://iranhrdc.org/three-days-among-the-dead-a-
+harrowing-account-of-a-protester-saved-from-kahrizak/) details the story of a protester
+taken to the Kahrizak detention center. Severely wounded, he survived by hiding inside a
+body bag for three days. He lay motionless among the corpses, without food or water,
+terrified that security forces would deliver a "finishing shot" if he moved. His family
+eventually found him in the morgue, alive among the dead. Stories like this prove that the
+barrier of fear is gone. The regime can kill thousands, but it cannot kill the memory of what
+they have done.
+Background: The Economic Crisis (2024–2025)
+• 2024–2025: Iran faces severe economic strain characterized by sharp inflation,
+currency devaluation, and energy deficits.
+• June 2025: A "Twelve-Day War" with Israel and strikes on nuclear facilities
+exacerbate instability.
+• September 2025: The United Nations reimposes sanctions via the "snapback"
+mechanism, freezing assets and halting transactions.
+• Late 2025: The economy sees an unprecedented surge in exchange rates. By
+December, year-on-year inflation hits 42.2%, with food prices rising by 72%.
+Timeline of Protests (Dec 2025 – Jan 2026)
+• 28 December 2025: Protests Begin. Sparked by the collapse of the Rial,
+shopkeepers in Tehran’s Grand Bazaar (specifically electronic goods sellers) close
+their shops and demonstrate.
+• 29 December 2025: Spread to Major Cities. Demonstrations expand to Lalehzar
+and Jomhuri Street in Tehran, as well as cities like Zanjan, Hamadan, and Qeshm.
+The "Tehran's Tank Man" incident occurs, where a lone protester blocks security
+forces.
+• 30 December 2025: Student Involvement. University students join the strikes.
+Slogans shift from economic grievances to anti-government chants such as "Death
+to the Dictator."
+• 3 January 2026: Government attempts to artificially increase the Rial's value fail to
+halt the unrest.
+• 6 January 2026: Currency Collapse. The Rial hits a record low (1.5 million to the
+USD). Protests are reported in 512 locations across 180 cities.
+• 8 January 2026: Escalation & Blackout. Following a call by Reza Pahlavi, 1.5 million
+people protest in Tehran. The government imposes a nationwide internet and
+telephone blackout.
+• 9 January 2026: Protests swell to an estimated 5 million participants nationwide.
+• 10 January 2026: Violent Crackdown. Security forces escalate the use of live
+ammunition. Reports indicate at least 2,000 protesters are killed within 48 hours.
+• 17 January 2026: Casualty Reports. Sources estimate the death toll has reached
+between 16,500 and 18,000, with over 330,000 injured.
