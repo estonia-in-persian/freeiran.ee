@@ -201,82 +201,50 @@ async function loadTweets() {
     
     if (!containerET || !containerEN) return;
     
+    // Skip if already loaded
+    if (containerET.dataset.loaded === 'true') return;
+    
     // Show loading message
     containerET.innerHTML = `<p class="placeholder-text">${translations[currentLang].tweets.loading}</p>`;
     containerEN.innerHTML = `<p class="placeholder-text">${translations['en'].tweets.loading}</p>`;
     
-    try {
-        const response = await fetch('tweets.json');
-        if (!response.ok) {
-            throw new Error('Failed to load tweets');
-        }
-        
-        const data = await response.json();
-        const tweets = data.tweets || [];
-        
-        if (tweets.length === 0) {
-            containerET.innerHTML = `<p class="placeholder-text">${translations['et'].tweets.noTweets}</p>`;
-            containerEN.innerHTML = `<p class="placeholder-text">${translations['en'].tweets.noTweets}</p>`;
-            return;
-        }
-        
-        // Render tweets for Estonian
-        containerET.innerHTML = tweets.map(tweet => {
-            return createTweetHTML(tweet);
-        }).join('');
-        
-        // Render tweets for English
-        containerEN.innerHTML = tweets.map(tweet => {
-            return createTweetHTML(tweet);
-        }).join('');
-        
-        // Load Twitter widgets
-        if (window.twttr && window.twttr.widgets) {
-            window.twttr.widgets.load();
-        }
-    } catch (error) {
-        console.error('Error loading tweets:', error);
+    const response = await fetch('tweets.json');
+    if (!response.ok) {
         containerET.innerHTML = `<p class="placeholder-text">Viga tweetide laadimisel.</p>`;
         containerEN.innerHTML = `<p class="placeholder-text">Error loading tweets.</p>`;
-    }
-}
-
-function createTweetHTML(tweet) {
-    // Extract tweet ID from URL
-    const tweetId = extractTweetId(tweet.url);
-    
-    if (!tweetId) {
-        return `
-            <div class="tweet-item">
-                <p class="placeholder-text">Vigane tweet URL</p>
-                <a href="${tweet.url}" target="_blank" rel="noopener noreferrer" class="tweet-link">Vaata Twitteris</a>
-            </div>
-        `;
+        return;
     }
     
-    return `
-        <div class="tweet-item">
-            <blockquote class="twitter-tweet tweet-embed" data-theme="light">
-                <a href="${tweet.url}"></a>
-            </blockquote>
-        </div>
-    `;
+    const data = await response.json();
+    const tweets = data.tweets || [];
+    
+    if (tweets.length === 0) {
+        containerET.innerHTML = `<p class="placeholder-text">${translations['et'].tweets.noTweets}</p>`;
+        containerEN.innerHTML = `<p class="placeholder-text">${translations['en'].tweets.noTweets}</p>`;
+        return;
+    }
+    
+    // Create placeholder divs for each tweet
+    containerET.innerHTML = tweets.map((_, i) => `<div class="tweet-item" id="tweet-et-${i}"></div>`).join('');
+    containerEN.innerHTML = tweets.map((_, i) => `<div class="tweet-item" id="tweet-en-${i}"></div>`).join('');
+    
+    // Use Twitter's createTweet API to render each tweet
+    if (window.twttr) {
+        window.twttr.ready(function(twttr) {
+            tweets.forEach((tweet, i) => {
+                const tweetId = extractTweetId(tweet.url);
+                if (tweetId) {
+                    twttr.widgets.createTweet(tweetId, document.getElementById(`tweet-et-${i}`), { theme: 'light' });
+                    twttr.widgets.createTweet(tweetId, document.getElementById(`tweet-en-${i}`), { theme: 'light' });
+                }
+            });
+        });
+    }
+    
+    containerET.dataset.loaded = 'true';
 }
 
 function extractTweetId(url) {
-    // Extract tweet ID from various Twitter URL formats
-    const patterns = [
-        /twitter\.com\/\w+\/status\/(\d+)/,
-        /x\.com\/\w+\/status\/(\d+)/,
-        /status\/(\d+)/
-    ];
-    
-    for (const pattern of patterns) {
-        const match = url.match(pattern);
-        if (match && match[1]) {
-            return match[1];
-        }
-    }
-    
-    return null;
+    const match = url.match(/status\/(\d+)/);
+    return match ? match[1] : null;
 }
