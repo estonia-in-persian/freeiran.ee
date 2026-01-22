@@ -13,7 +13,7 @@ const translations = {
             gallery: 'Galerii',
             timeline: 'Ajajoon',
             help: 'Kuidas aidata',
-            contact: 'Kontakt'
+            'islamic-republic': 'Mis on Islamivabariik?'
         },
         tweets: {
             title: 'Eesti poliitikute sõnavõtud',
@@ -30,7 +30,7 @@ const translations = {
             gallery: 'Gallery',
             timeline: 'Timeline',
             help: 'How to Help',
-            contact: 'Contact'
+            'islamic-republic': 'Who is Islamic Republic?'
         },
         tweets: {
             title: 'Estonian Politicians\' Statements',
@@ -159,7 +159,7 @@ function setLanguage(lang) {
     }
     
     // Show/hide content sections
-    const sections = ['home', 'about', 'tweets', 'gallery', 'timeline', 'help', 'contact'];
+    const sections = ['home', 'about', 'tweets', 'gallery', 'timeline', 'help', 'islamic-republic'];
     sections.forEach(section => {
         const etContent = document.getElementById(`${section}-et`) || document.getElementById(`content-et`);
         const enContent = document.getElementById(`${section}-en`) || document.getElementById(`content-en`);

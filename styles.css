@@ -370,6 +370,136 @@ h2:first-of-type {
     border-radius: 2px;
 }
 
+/* Islamic Republic Content */
+.islamic-republic-content {
+    text-align: justify;
+}
+
+.islamic-republic-content p {
+    margin-bottom: 24px;
+    line-height: 1.8;
+    color: var(--text-color);
+}
+
+.islamic-republic-content p:last-child {
+    margin-bottom: 0;
+}
+
+/* Timeline Content */
+.timeline-content {
+    max-width: 100%;
+}
+
+.timeline-intro {
+    font-size: 20px;
+    line-height: 1.8;
+    margin-bottom: 40px;
+    color: var(--text-color);
+    font-weight: 400;
+    text-align: justify;
+}
+
+.timeline-content h3 {
+    font-size: 22px;
+    font-weight: 600;
+    margin-top: 48px;
+    margin-bottom: 24px;
+    color: var(--primary-color);
+    letter-spacing: -0.3px;
+}
+
+.timeline-content h3:first-of-type {
+    margin-top: 0;
+}
+
+.timeline-list {
+    list-style: none;
+    padding: 0;
+    margin: 24px 0 40px 0;
+}
+
+.timeline-list li {
+    padding: 16px 0 16px 32px;
+    border-left: 4px solid var(--secondary-color);
+    margin-bottom: 16px;
+    background: #f8f9fa;
+    padding-left: 28px;
+    padding-right: 20px;
+    border-radius: 4px;
+    position: relative;
+    text-align: justify;
+    line-height: 1.7;
+}
+
+.timeline-list li::before {
+    content: '•';
+    position: absolute;
+    left: 12px;
+    color: var(--secondary-color);
+    font-size: 24px;
+    font-weight: bold;
+    line-height: 1;
+}
+
+.timeline-list li strong {
+    color: var(--primary-color);
+    font-weight: 600;
+}
+
+.timeline-events {
+    margin-top: 32px;
+    position: relative;
+    padding-left: 32px;
+}
+
+.timeline-events::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 3px;
+    background: linear-gradient(to bottom, var(--secondary-color), var(--primary-color));
+    border-radius: 2px;
+}
+
+.timeline-event {
+    position: relative;
+    margin-bottom: 32px;
+    padding-left: 24px;
+}
+
+.timeline-event::before {
+    content: '';
+    position: absolute;
+    left: -8px;
+    top: 8px;
+    width: 16px;
+    height: 16px;
+    background-color: var(--secondary-color);
+    border: 3px solid white;
+    border-radius: 50%;
+    box-shadow: 0 0 0 2px var(--secondary-color);
+}
+
+.timeline-date {
+    font-weight: 600;
+    font-size: 18px;
+    color: var(--primary-color);
+    margin-bottom: 8px;
+    letter-spacing: -0.2px;
+}
+
+.timeline-description {
+    line-height: 1.7;
+    color: var(--text-color);
+    text-align: justify;
+    background: #f8f9fa;
+    padding: 16px 20px;
+    border-radius: 6px;
+    border-left: 3px solid var(--secondary-color);
+}
+
 /* Responsive Design */
 @media (max-width: 1024px) {
     .tweets-container {
@@ -461,6 +591,33 @@ h2:first-of-type {
 
     .tweets-container {
         gap: 16px;
+    }
+
+    .timeline-events {
+        padding-left: 24px;
+    }
+
+    .timeline-event {
+        padding-left: 20px;
+    }
+
+    .timeline-date {
+        font-size: 16px;
+    }
+
+    .timeline-description {
+        padding: 14px 16px;
+        font-size: 15px;
+    }
+
+    .timeline-intro {
+        font-size: 18px;
+        margin-bottom: 32px;
+    }
+
+    .timeline-content h3 {
+        font-size: 20px;
+        margin-top: 36px;
     }
 }
 
