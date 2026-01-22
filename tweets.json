@@ -1,0 +1,24 @@
+{
+  "tweets": [
+    {
+      "url": "https://x.com/markomihkelson/status/2006152114750255517",
+      "author": "Marko Mihkelson",
+      "date": "2026-01-15"
+    },
+    {
+      "url": "https://x.com/kajakallas/status/2013656967147852024",
+      "author": "Kaja Kallas",
+      "date": "2026-01-15"
+    },
+    {
+      "url": "https://x.com/Tsahkna/status/2011423451748192480",
+      "author": "Margus Tsahkna",
+      "date": "2026-01-15"
+    },
+    {
+      "url": "https://x.com/MFAestonia/status/2011842174124789863",
+      "author": "Estonian MFA",
+      "date": "2026-01-15"
+    }
+  ]
+}

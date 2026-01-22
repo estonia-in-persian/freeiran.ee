@@ -26,7 +26,7 @@ body {
 
 /* Container */
 .container {
-    max-width: 800px;
+    max-width: 900px;
     margin: 0 auto;
     padding: 0 24px;
 }
@@ -35,24 +35,94 @@ body {
 header {
     background-color: var(--primary-color);
     color: white;
-    padding: 32px 0;
+    padding: 20px 0;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
     margin-bottom: 48px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
 }
 
 header .container {
     display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.header-top {
+    display: flex;
     justify-content: space-between;
     align-items: center;
-    flex-wrap: wrap;
-    gap: 16px;
+    width: 100%;
 }
 
 .site-title {
-    font-size: 28px;
+    font-size: 24px;
     font-weight: 600;
     letter-spacing: -0.5px;
     margin: 0;
+}
+
+/* Navigation */
+.main-nav {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    position: relative;
+}
+
+.nav-menu {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4px;
+    margin: 0;
+    padding: 0;
+    flex: 1;
+}
+
+.nav-link {
+    color: white;
+    text-decoration: none;
+    padding: 8px 12px;
+    border-radius: 6px;
+    transition: background-color 0.2s ease;
+    font-size: 14px;
+    display: block;
+    font-weight: 500;
+    white-space: nowrap;
+}
+
+.nav-link:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.nav-link.active {
+    background-color: rgba(255, 255, 255, 0.2);
+    font-weight: 600;
+}
+
+.nav-link:focus {
+    outline: 2px solid rgba(255, 255, 255, 0.5);
+    outline-offset: 2px;
+}
+
+.nav-toggle {
+    display: none;
+    flex-direction: column;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 8px;
+    gap: 5px;
+}
+
+.nav-toggle span {
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    border-radius: 2px;
+    transition: all 0.3s ease;
 }
 
 /* Language Toggle */
@@ -99,6 +169,29 @@ header .container {
     margin: 0 2px;
 }
 
+/* Page Sections */
+.page-section {
+    display: none;
+    animation: fadeIn 0.3s ease-in;
+    min-height: 60vh;
+    padding-bottom: 64px;
+}
+
+.page-section.active {
+    display: block;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
 /* Main Content */
 main {
     margin-bottom: 64px;
@@ -114,17 +207,6 @@ article {
 
 .content.hidden {
     display: none;
-}
-
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-        transform: translateY(10px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
 }
 
 .lead {
@@ -147,6 +229,14 @@ h2 {
 
 h2:first-of-type {
     margin-top: 0;
+}
+
+.placeholder-text {
+    font-style: italic;
+    color: var(--text-light);
+    text-align: center;
+    padding: 48px 0;
+    font-size: 18px;
 }
 
 /* Key Points */
@@ -234,7 +324,59 @@ h2:first-of-type {
     border-radius: 2px;
 }
 
+/* Tweets Section */
+.tweets-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 24px;
+    margin-top: 32px;
+}
+
+.tweet-item {
+    display: flex;
+    flex-direction: column;
+    background: #f8f9fa;
+    border-radius: 8px;
+    padding: 16px;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.tweet-item:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.tweet-embed {
+    margin: 0 auto;
+    max-width: 100%;
+}
+
+.tweet-link {
+    display: inline-block;
+    margin-top: 12px;
+    color: var(--secondary-color);
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.tweet-link:hover {
+    text-decoration: underline;
+}
+
+.tweet-link:focus {
+    outline: 2px solid var(--focus-color);
+    outline-offset: 2px;
+    border-radius: 2px;
+}
+
 /* Responsive Design */
+@media (max-width: 1024px) {
+    .tweets-container {
+        grid-template-columns: 1fr;
+    }
+}
+
 @media (max-width: 768px) {
     body {
         font-size: 16px;
@@ -245,21 +387,50 @@ h2:first-of-type {
     }
 
     header {
-        padding: 24px 0;
+        padding: 20px 0;
         margin-bottom: 32px;
     }
 
     .site-title {
-        font-size: 24px;
+        font-size: 20px;
     }
 
-    header .container {
+    .header-top {
+        flex-wrap: wrap;
+        gap: 12px;
+    }
+
+    .main-nav {
+        width: 100%;
         flex-direction: column;
-        align-items: flex-start;
+        align-items: stretch;
+    }
+
+    .nav-toggle {
+        display: flex;
+        align-self: flex-end;
+    }
+
+    .nav-menu {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        gap: 4px;
+        margin-top: 16px;
+    }
+
+    .nav-menu.active {
+        display: flex;
+    }
+
+    .nav-link {
+        padding: 12px 16px;
+        border-radius: 6px;
+        width: 100%;
     }
 
     .language-toggle {
-        align-self: flex-end;
+        margin-top: 0;
     }
 
     .lead {
@@ -283,11 +454,19 @@ h2:first-of-type {
     main {
         margin-bottom: 48px;
     }
+
+    .page-section {
+        padding-bottom: 48px;
+    }
+
+    .tweets-container {
+        gap: 16px;
+    }
 }
 
 @media (max-width: 480px) {
     .site-title {
-        font-size: 20px;
+        font-size: 18px;
     }
 
     .lang-btn {
@@ -301,5 +480,9 @@ h2:first-of-type {
 
     h2 {
         font-size: 20px;
+    }
+
+    .nav-link {
+        font-size: 14px;
     }
 }

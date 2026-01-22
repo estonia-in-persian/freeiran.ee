@@ -9,67 +9,177 @@
 <body>
     <header>
         <div class="container">
-            <h1 class="site-title">Iran: Vabaduse võitlus</h1>
-            <div class="language-toggle">
-                <button id="langToggle" class="lang-btn" aria-label="Switch language">
-                    <span class="lang-active">ET</span>
-                    <span class="lang-separator">/</span>
-                    <span class="lang-inactive">EN</span>
-                </button>
+            <div class="header-top">
+                <h1 class="site-title">Iran: Vabaduse võitlus</h1>
+                <div class="language-toggle">
+                    <button id="langToggle" class="lang-btn" aria-label="Switch language">
+                        <span class="lang-active">ET</span>
+                        <span class="lang-separator">/</span>
+                        <span class="lang-inactive">EN</span>
+                    </button>
+                </div>
             </div>
+            <nav class="main-nav" id="mainNav">
+                <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation" aria-expanded="false">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <ul class="nav-menu" id="navMenu">
+                    <li><a href="#home" class="nav-link active" data-section="home">Avaleht</a></li>
+                    <li><a href="#about" class="nav-link" data-section="about">Meist</a></li>
+                    <li><a href="#tweets" class="nav-link" data-section="tweets">Poliitikute sõnavõtud</a></li>
+                    <li><a href="#gallery" class="nav-link" data-section="gallery">Galerii</a></li>
+                    <li><a href="#timeline" class="nav-link" data-section="timeline">Ajajoon</a></li>
+                    <li><a href="#help" class="nav-link" data-section="help">Kuidas aidata</a></li>
+                    <li><a href="#contact" class="nav-link" data-section="contact">Kontakt</a></li>
+                </ul>
+            </nav>
         </div>
     </header>
 
-    <main class="container">
-        <article>
-            <!-- Estonian Content (Default) -->
-            <div id="content-et" class="content">
-                <p class="lead">
-                    2025. aasta detsembri lõpus ja 2026. aasta jaanuari alguses puhkesid Iraanis ulatuslikud protestid süveneva majanduskriisi ja pikaajalise poliitilise allasurumise taustal. Pärast Reza Pahlavi avalikku üleskutset minna tänavatele vaba ja demokraatliku Iraani nimel vastasid võimud ulatusliku ja vägivaldse repressiooniga. Julgeolekujõud kasutasid laialdaselt surmavat jõudu ning riik kehtestas peaaegu täieliku üleriigilise internetikatkestuse, et piirata organiseerumist, teabe levikut ja rahvusvahelist tähelepanu. Vägivalla ja infosulu ulatus asetab need sündmused islamivabariigi ajaloo kõige rängemate repressioonide hulka.
-                </p>
+    <main>
+        <!-- Home/Intro Section -->
+        <section id="home" class="page-section active">
+            <div class="container">
+                <div id="content-et" class="content">
+                    <h2>Sissejuhatus</h2>
+                    <p class="lead">
+                        2025. aasta detsembri lõpus ja 2026. aasta jaanuari alguses puhkesid Iraanis ulatuslikud protestid süveneva majanduskriisi ja pikaajalise poliitilise allasurumise taustal. Pärast Reza Pahlavi avalikku üleskutset minna tänavatele vaba ja demokraatliku Iraani nimel vastasid võimud ulatusliku ja vägivaldse repressiooniga. Julgeolekujõud kasutasid laialdaselt surmavat jõudu ning riik kehtestas peaaegu täieliku üleriigilise internetikatkestuse, et piirata organiseerumist, teabe levikut ja rahvusvahelist tähelepanu. Vägivalla ja infosulu ulatus asetab need sündmused islamivabariigi ajaloo kõige rängemate repressioonide hulka.
+                    </p>
 
-                <h2>Põhipunktid</h2>
-                <ul class="key-points">
-                    <li>Repressioonide käigus hukkus <strong>vähemalt 12 000 inimest</strong>, tuginedes sisemistele allikatele ja sõltumatutele hinnangutele.<sup>1</sup></li>
-                    <li>Kehtestati <strong>üle 12 päeva kestnud üleriigiline internetikatkestus</strong>, mis takistas sidepidamist ja sõltumatut dokumenteerimist.<sup>2</sup></li>
-                    <li>Protestid peegeldavad laiemat nõudmist poliitiliste vabaduste, vastutuse ja autoritaarse süsteemi lõpetamise järele.<sup>3</sup></li>
-                </ul>
+                    <h2>Põhipunktid</h2>
+                    <ul class="key-points">
+                        <li>Repressioonide käigus hukkus <strong>vähemalt 12 000 inimest</strong>, tuginedes sisemistele allikatele ja sõltumatutele hinnangutele.<sup>1</sup></li>
+                        <li>Kehtestati <strong>üle 12 päeva kestnud üleriigiline internetikatkestus</strong>, mis takistas sidepidamist ja sõltumatut dokumenteerimist.<sup>2</sup></li>
+                        <li>Protestid peegeldavad laiemat nõudmist poliitiliste vabaduste, vastutuse ja autoritaarse süsteemi lõpetamise järele.<sup>3</sup></li>
+                    </ul>
 
-                <section class="footnotes">
-                    <h2>Allikad</h2>
-                    <ol>
-                        <li>Iran International, reports on protest death toll based on internal sources (January 2026): <a href="https://www.iranintl.com" target="_blank" rel="noopener noreferrer">https://www.iranintl.com</a></li>
-                        <li>Documentation of the 2026 nationwide internet shutdown in Iran: <a href="https://en.wikipedia.org/wiki/2026_Internet_blackout_in_Iran" target="_blank" rel="noopener noreferrer">https://en.wikipedia.org/wiki/2026_Internet_blackout_in_Iran</a></li>
-                        <li>Background and analysis of the 2025–2026 Iranian protests and their political demands: <a href="https://en.wikipedia.org/wiki/2025%E2%80%932026_Iranian_protests" target="_blank" rel="noopener noreferrer">https://en.wikipedia.org/wiki/2025–2026_Iranian_protests</a></li>
-                    </ol>
-                </section>
+                    <section class="footnotes">
+                        <h2>Allikad</h2>
+                        <ol>
+                            <li>Iran International, reports on protest death toll based on internal sources (January 2026): <a href="https://www.iranintl.com" target="_blank" rel="noopener noreferrer">https://www.iranintl.com</a></li>
+                            <li>Documentation of the 2026 nationwide internet shutdown in Iran: <a href="https://en.wikipedia.org/wiki/2026_Internet_blackout_in_Iran" target="_blank" rel="noopener noreferrer">https://en.wikipedia.org/wiki/2026_Internet_blackout_in_Iran</a></li>
+                            <li>Background and analysis of the 2025–2026 Iranian protests and their political demands: <a href="https://en.wikipedia.org/wiki/2025%E2%80%932026_Iranian_protests" target="_blank" rel="noopener noreferrer">https://en.wikipedia.org/wiki/2025–2026_Iranian_protests</a></li>
+                        </ol>
+                    </section>
+                </div>
+
+                <div id="content-en" class="content hidden">
+                    <h2>Introduction</h2>
+                    <p class="lead">
+                        In late December 2025 and early January 2026, widespread protests erupted across Iran amid deep economic crisis and long-standing political repression. Following a public call by Reza Pahlavi urging Iranians to take to the streets in pursuit of a free and democratic future, state authorities responded with an extensive and violent crackdown. Security forces deployed lethal force at scale, while the government imposed a total nationwide internet shutdown to limit coordination, reporting, and external scrutiny. The scale of violence and information suppression places these events among the most severe episodes of state repression in recent history.
+                    </p>
+
+                    <h2>Key points</h2>
+                    <ul class="key-points">
+                        <li>At least <strong>12,000 people were killed</strong> during the crackdown, according to reports based on internal sources and independent verification efforts.<sup>1</sup></li>
+                        <li>Authorities enforced a <strong>nationwide internet blackout lasting over 12 days</strong>, severely restricting communication and independent documentation.<sup>2</sup></li>
+                        <li>The protests reflect broader demands for political freedom, accountability, and a transition away from authoritarian rule.<sup>3</sup></li>
+                    </ul>
+
+                    <section class="footnotes">
+                        <h2>Sources</h2>
+                        <ol>
+                            <li>Iran International, reports on protest death toll based on internal sources (January 2026): <a href="https://www.iranintl.com" target="_blank" rel="noopener noreferrer">https://www.iranintl.com</a></li>
+                            <li>Documentation of the 2026 nationwide internet shutdown in Iran: <a href="https://en.wikipedia.org/wiki/2026_Internet_blackout_in_Iran" target="_blank" rel="noopener noreferrer">https://en.wikipedia.org/wiki/2026_Internet_blackout_in_Iran</a></li>
+                            <li>Background and analysis of the 2025–2026 Iranian protests and their political demands: <a href="https://en.wikipedia.org/wiki/2025%E2%80%932026_Iranian_protests" target="_blank" rel="noopener noreferrer">https://en.wikipedia.org/wiki/2025–2026_Iranian_protests</a></li>
+                        </ol>
+                    </section>
+                </div>
             </div>
+        </section>
 
-            <!-- English Content (Hidden by default) -->
-            <div id="content-en" class="content hidden">
-                <p class="lead">
-                    In late December 2025 and early January 2026, widespread protests erupted across Iran amid deep economic crisis and long-standing political repression. Following a public call by Reza Pahlavi urging Iranians to take to the streets in pursuit of a free and democratic future, state authorities responded with an extensive and violent crackdown. Security forces deployed lethal force at scale, while the government imposed a total nationwide internet shutdown to limit coordination, reporting, and external scrutiny. The scale of violence and information suppression places these events among the most severe episodes of state repression in recent history.
-                </p>
-
-                <h2>Key points</h2>
-                <ul class="key-points">
-                    <li>At least <strong>12,000 people were killed</strong> during the crackdown, according to reports based on internal sources and independent verification efforts.<sup>1</sup></li>
-                    <li>Authorities enforced a <strong>nationwide internet blackout lasting over 12 days</strong>, severely restricting communication and independent documentation.<sup>2</sup></li>
-                    <li>The protests reflect broader demands for political freedom, accountability, and a transition away from authoritarian rule.<sup>3</sup></li>
-                </ul>
-
-                <section class="footnotes">
-                    <h2>Sources</h2>
-                    <ol>
-                        <li>Iran International, reports on protest death toll based on internal sources (January 2026): <a href="https://www.iranintl.com" target="_blank" rel="noopener noreferrer">https://www.iranintl.com</a></li>
-                        <li>Documentation of the 2026 nationwide internet shutdown in Iran: <a href="https://en.wikipedia.org/wiki/2026_Internet_blackout_in_Iran" target="_blank" rel="noopener noreferrer">https://en.wikipedia.org/wiki/2026_Internet_blackout_in_Iran</a></li>
-                        <li>Background and analysis of the 2025–2026 Iranian protests and their political demands: <a href="https://en.wikipedia.org/wiki/2025%E2%80%932026_Iranian_protests" target="_blank" rel="noopener noreferrer">https://en.wikipedia.org/wiki/2025–2026_Iranian_protests</a></li>
-                    </ol>
-                </section>
+        <!-- About Us Section -->
+        <section id="about" class="page-section">
+            <div class="container">
+                <div id="about-et" class="content">
+                    <h2>Meist</h2>
+                    <p class="placeholder-text">Sisu lisatakse varsti...</p>
+                </div>
+                <div id="about-en" class="content hidden">
+                    <h2>About Us</h2>
+                    <p class="placeholder-text">Content coming soon...</p>
+                </div>
             </div>
-        </article>
+        </section>
+
+        <!-- Tweets Section -->
+        <section id="tweets" class="page-section">
+            <div class="container">
+                <div id="tweets-et" class="content">
+                    <h2>Eesti poliitikute sõnavõtud</h2>
+                    <div id="tweets-container" class="tweets-container">
+                        <p class="placeholder-text">Laadimine...</p>
+                    </div>
+                </div>
+                <div id="tweets-en" class="content hidden">
+                    <h2>Estonian Politicians' Statements</h2>
+                    <div id="tweets-container-en" class="tweets-container">
+                        <p class="placeholder-text">Loading...</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Gallery Section -->
+        <section id="gallery" class="page-section">
+            <div class="container">
+                <div id="gallery-et" class="content">
+                    <h2>Galerii</h2>
+                    <p class="placeholder-text">Sisu lisatakse varsti...</p>
+                </div>
+                <div id="gallery-en" class="content hidden">
+                    <h2>Gallery</h2>
+                    <p class="placeholder-text">Content coming soon...</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Timeline Section -->
+        <section id="timeline" class="page-section">
+            <div class="container">
+                <div id="timeline-et" class="content">
+                    <h2>Ajajoon</h2>
+                    <p class="placeholder-text">Sisu lisatakse varsti...</p>
+                </div>
+                <div id="timeline-en" class="content hidden">
+                    <h2>Timeline</h2>
+                    <p class="placeholder-text">Content coming soon...</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- How to Help Section -->
+        <section id="help" class="page-section">
+            <div class="container">
+                <div id="help-et" class="content">
+                    <h2>Kuidas aidata</h2>
+                    <p class="placeholder-text">Sisu lisatakse varsti...</p>
+                </div>
+                <div id="help-en" class="content hidden">
+                    <h2>How to Help</h2>
+                    <p class="placeholder-text">Content coming soon...</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="page-section">
+            <div class="container">
+                <div id="contact-et" class="content">
+                    <h2>Kontakt</h2>
+                    <p class="placeholder-text">Sisu lisatakse varsti...</p>
+                </div>
+                <div id="contact-en" class="content hidden">
+                    <h2>Contact Us</h2>
+                    <p class="placeholder-text">Content coming soon...</p>
+                </div>
+            </div>
+        </section>
     </main>
 
+    <script src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
     <script src="script.js"></script>
 </body>
 </html>
