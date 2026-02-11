@@ -239,6 +239,97 @@ h2:first-of-type {
     font-size: 18px;
 }
 
+/* Path to Freedom Section */
+.path-to-freedom-content {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 32px;
+    align-items: flex-start;
+    margin-top: 24px;
+}
+
+.path-to-freedom-figure {
+    flex: 0 0 280px;
+    margin: 0;
+}
+
+.path-to-freedom-image {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.path-to-freedom-figure figcaption {
+    margin-top: 12px;
+    font-size: 14px;
+    color: var(--text-light);
+}
+
+.path-to-freedom-text {
+    flex: 1;
+    min-width: 280px;
+}
+
+.path-to-freedom-text p {
+    text-align: justify;
+    margin-bottom: 20px;
+    line-height: 1.8;
+}
+
+.path-to-freedom-text p:last-child {
+    margin-bottom: 0;
+}
+
+.path-to-freedom-cta {
+    margin-top: 28px !important;
+}
+
+.nav-link-inline {
+    color: var(--secondary-color);
+    text-decoration: none;
+    font-weight: 600;
+    padding: 8px 16px;
+    border: 2px solid var(--secondary-color);
+    border-radius: 6px;
+    display: inline-block;
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.nav-link-inline:hover {
+    background-color: var(--secondary-color);
+    color: white;
+}
+
+/* How to Help Section */
+.help-asks {
+    margin: 24px 0;
+    padding-left: 24px;
+}
+
+.help-asks li {
+    margin-bottom: 16px;
+    padding-left: 8px;
+}
+
+.help-figure {
+    margin: 32px 0;
+    text-align: center;
+}
+
+.help-image {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.help-figure figcaption {
+    margin-top: 12px;
+    font-size: 14px;
+    color: var(--text-light);
+}
+
 /* About Us / Contact Section */
 .about-contact {
     background: #f8f9fa;
@@ -655,6 +746,20 @@ h2:first-of-type {
 
     .page-section {
         padding-bottom: 48px;
+    }
+
+    .path-to-freedom-content {
+        flex-direction: column;
+        gap: 24px;
+    }
+
+    .path-to-freedom-figure {
+        flex: 0 0 auto;
+        max-width: 320px;
+    }
+
+    .path-to-freedom-text p {
+        margin-bottom: 16px;
     }
 
     .tweets-container {

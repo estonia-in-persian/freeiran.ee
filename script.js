@@ -64,13 +64,15 @@ document.addEventListener('DOMContentLoaded', function() {
 
 // Navigation functions
 function initializeNavigation() {
-    const navLinks = document.querySelectorAll('.nav-link');
+    const navLinks = document.querySelectorAll('.nav-link, .nav-link-inline');
     navLinks.forEach(link => {
         link.addEventListener('click', function(e) {
-            e.preventDefault();
             const section = this.getAttribute('data-section');
-            showSection(section);
-            window.location.hash = section;
+            if (section) {
+                e.preventDefault();
+                showSection(section);
+                window.location.hash = section;
+            }
         });
     });
 }
