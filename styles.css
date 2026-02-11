@@ -74,7 +74,7 @@ header .container {
 .nav-menu {
     list-style: none;
     display: flex;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
     gap: 4px;
     margin: 0;
     padding: 0;
@@ -105,6 +105,12 @@ header .container {
 .nav-link:focus {
     outline: 2px solid rgba(255, 255, 255, 0.5);
     outline-offset: 2px;
+}
+
+/* Keep EN nav tabs on one line (labels are longer than Estonian) */
+html[lang="en"] .nav-menu .nav-link {
+    font-size: 12px;
+    padding: 6px 10px;
 }
 
 .nav-toggle {
