@@ -8,12 +8,13 @@ const translations = {
         title: 'Iran: Vabaduse võitlus',
         nav: {
             home: 'Avaleht',
-            about: 'Meist',
+            timeline: 'Ajajoon',
+            'path-to-freedom': 'Teekond vabaduseni',
+            'islamic-republic': 'Mis on Islamivabariik?',
             tweets: 'Poliitikute sõnavõtud',
             gallery: 'Galerii',
-            timeline: 'Ajajoon',
             help: 'Kuidas aidata',
-            'islamic-republic': 'Mis on Islamivabariik?'
+            about: 'Meist'
         },
         tweets: {
             title: 'Eesti poliitikute sõnavõtud',
@@ -25,12 +26,13 @@ const translations = {
         title: 'Iran: a Fight for Freedom',
         nav: {
             home: 'Home',
-            about: 'About Us',
+            timeline: 'Timeline',
+            'path-to-freedom': 'A Path to Freedom',
+            'islamic-republic': 'Who is Islamic Republic?',
             tweets: 'Politicians\' Statements',
             gallery: 'Gallery',
-            timeline: 'Timeline',
             help: 'How to Help',
-            'islamic-republic': 'Who is Islamic Republic?'
+            about: 'About Us'
         },
         tweets: {
             title: 'Estonian Politicians\' Statements',
@@ -160,7 +162,7 @@ function setLanguage(lang) {
     }
     
     // Show/hide content sections
-    const sections = ['home', 'about', 'tweets', 'gallery', 'timeline', 'help', 'islamic-republic'];
+    const sections = ['home', 'timeline', 'path-to-freedom', 'islamic-republic', 'tweets', 'gallery', 'help', 'about'];
     sections.forEach(section => {
         const etContent = document.getElementById(`${section}-et`) || document.getElementById(`content-et`);
         const enContent = document.getElementById(`${section}-en`) || document.getElementById(`content-en`);
