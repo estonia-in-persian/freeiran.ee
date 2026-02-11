@@ -12,7 +12,6 @@ const translations = {
             'path-to-freedom': 'Teekond vabaduseni',
             'islamic-republic': 'Mis on Islamivabariik?',
             tweets: 'Poliitikute sõnavõtud',
-            gallery: 'Galerii',
             help: 'Kuidas aidata',
             about: 'Meist'
         },
@@ -30,7 +29,6 @@ const translations = {
             'path-to-freedom': 'A Path to Freedom',
             'islamic-republic': 'Who is Islamic Republic?',
             tweets: 'Politicians\' Statements',
-            gallery: 'Gallery',
             help: 'How to Help',
             about: 'About Us'
         },
@@ -164,7 +162,7 @@ function setLanguage(lang) {
     }
     
     // Show/hide content sections
-    const sections = ['home', 'timeline', 'path-to-freedom', 'islamic-republic', 'tweets', 'gallery', 'help', 'about'];
+    const sections = ['home', 'timeline', 'path-to-freedom', 'islamic-republic', 'tweets', 'help', 'about'];
     sections.forEach(section => {
         const etContent = document.getElementById(`${section}-et`) || document.getElementById(`content-et`);
         const enContent = document.getElementById(`${section}-en`) || document.getElementById(`content-en`);
