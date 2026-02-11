@@ -46,6 +46,7 @@ document.addEventListener('DOMContentLoaded', function() {
     initializeLanguage();
     initializeMobileMenu();
     loadTweets();
+    initializeEmailLinks();
     
     // Handle hash navigation
     if (window.location.hash) {
@@ -247,4 +248,18 @@ async function loadTweets() {
 function extractTweetId(url) {
     const match = url.match(/status\/(\d+)/);
     return match ? match[1] : null;
+}
+
+// Email link: build mailto on click (spam protection)
+function initializeEmailLinks() {
+    document.querySelectorAll('.about-email-link').forEach(link => {
+        link.addEventListener('click', function(e) {
+            e.preventDefault();
+            const user = this.getAttribute('data-user');
+            const domain = this.getAttribute('data-domain');
+            if (user && domain) {
+                window.location.href = 'mailto:' + user + '@' + domain;
+            }
+        });
+    });
 }

@@ -239,6 +239,74 @@ h2:first-of-type {
     font-size: 18px;
 }
 
+/* About Us / Contact Section */
+.about-contact {
+    background: #f8f9fa;
+    border-radius: 8px;
+    padding: 32px;
+    border-left: 4px solid var(--secondary-color);
+    margin-top: 24px;
+}
+
+.about-org {
+    font-size: 20px;
+    font-weight: 600;
+    color: var(--primary-color);
+    margin-bottom: 4px;
+}
+
+.about-org-persian {
+    font-size: 18px;
+    color: var(--text-light);
+    margin-bottom: 24px;
+    direction: rtl;
+    text-align: left;
+}
+
+.about-contact-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.about-contact-list li {
+    display: flex;
+    align-items: baseline;
+    gap: 8px;
+    padding: 12px 0;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.about-contact-list li:last-child {
+    border-bottom: none;
+}
+
+.about-label {
+    font-weight: 600;
+    color: var(--text-color);
+    min-width: 80px;
+}
+
+.about-link {
+    color: var(--secondary-color);
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.about-link:hover {
+    text-decoration: underline;
+}
+
+.about-email-link {
+    color: var(--secondary-color);
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.about-email-link:hover {
+    text-decoration: underline;
+}
+
 /* Key Points */
 .key-points {
     list-style: none;
